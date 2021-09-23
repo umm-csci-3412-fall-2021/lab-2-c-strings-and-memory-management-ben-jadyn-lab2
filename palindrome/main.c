@@ -15,7 +15,7 @@ int main(int argc, char *argv[]) {
   // and returns it in the buffer passed as the first argument
   // (line here). If there's no more input to read from, it
   // returns NULL.
-  is_palindrome="";
+  char* is_palindrome;
   while (fgets(line, size, stdin) != NULL) {
     // This crazy line removes the '\n' at the end of the input line.
     // Without it, nothing will ever be a palindrome, unless it happens
