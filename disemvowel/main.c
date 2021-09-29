@@ -11,6 +11,9 @@ int main(int argc, char *argv[]) {
   line = (char*) malloc (size + 1);
 
   while (getline(&line, &size, stdin) > 0) {
-    printf("%s\n", disemvowel(line));
+    char *disemvowel_string = disemvowel(line);
+    printf("%s\n", disemvowel_string);
+    free(disemvowel_string);
   }
+  free(line);
 }
